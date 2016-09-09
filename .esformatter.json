@@ -1,0 +1,11 @@
+{
+  "lineBreak": {
+    "before": {
+      "ArrowFunctionExpressionClosingBrace": ">=0"
+    },
+    "after": {
+      "ArrowFunctionExpressionOpeningBrace": ">=0",
+      "ArrowFunctionExpressionClosingBrace": ">=0"
+    }
+  }
+}

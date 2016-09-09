@@ -1,0 +1,291 @@
+@font-face {
+  font-family: 'ArrrowsBoldRegular';
+  src: url('assets/arrrows-bold-webfont.eot');
+  src: url('assets/arrrows-bold-webfont.eot?#iefix') format('embedded-opentype'), url('assets/arrrows-bold-webfont.woff') format('woff'), url('assets/arrrows-bold-webfont.ttf') format('truetype'), url('assets/arrrows-bold-webfont.svg#ArrrowsBoldRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArrrowsRegular';
+  src: url('assets/arrrows-regular-webfont.eot');
+  src: url('assets/arrrows-regular-webfont.eot?#iefix') format('embedded-opentype'), url('assets/arrrows-regular-webfont.woff') format('woff'), url('assets/arrrows-regular-webfont.ttf') format('truetype'), url('assets/arrrows-regular-webfont.svg#ArrrowsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body#pongy {
+  background: #ccc;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+#pongy article {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+
+}
+
+#pongy section {
+  position: relative;
+  background: #fff;
+  padding: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaa;
+  margin-top: 5px;
+}
+
+#react-pong {
+  padding: 10px 0px 0px 0px;
+  // position: relative;
+  // bottom: 3px;
+  // right: -10px;
+}
+
+#reactive-pong {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background .2s ease-out;
+  -moz-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+}
+
+#konami.complete #game, #react-pong #game {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  -moz-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
+}
+
+#konami.complete #reactive-pong {
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background .2s ease-out;
+  -moz-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+}
+
+#konami.complete #ghpong {
+  display: block;
+}
+
+#game {
+  width: 242px;
+  height: 421px;
+  margin: 10px;
+  border-radius: 6px;
+  border: 1px solid #CCC;
+  background: #fff;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -121px;
+  top: 10px;
+  -webkit-transform: perspective(800px) rotateY(90deg);
+  -moz-transform: perspective(800px) rotateY(90deg);
+  transform: perspective(800px) rotateY(90deg);
+}
+
+#react-pong #game {
+  position: relative;
+  left: 0;
+  margin-left: 30%;
+}
+
+#lives {
+  color: #444;
+  font-size: 1em;
+  float: right;
+  margin-right: 5px;
+}
+
+#score {
+  color: #444;
+  font-size: 1em;
+  text-align: left;
+  margin-left: 5px;
+}
+
+#arena {
+  border: 0px solid #fff;
+  border-radius: 0 0 6px 6px;
+  width: 242px;
+  margin: 0 auto;
+  height: 400px;
+  position: absolute;
+  background: #000;
+  overflow: hidden;
+}
+
+#paddle1 {
+  background: #fff;
+  position: absolute;
+
+  // background-color: #808284;
+  background-size: auto 200%;
+  background-position: 0 100%;
+}
+
+#paddle2 {
+  background: #fff;
+  position: absolute;
+  // background-color: #808284;
+  background-size: auto 200%;
+  background-position: 0 100%;
+}
+
+#ball {
+  background: #FFF;
+  position: absolute;
+  // box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#marquee {
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  padding-top: 20%;
+}
+
+#marquee h1 {
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 25px 0 0 0;
+  // letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+#marquee h2 {
+  margin: 0;
+  padding: 10px 0 0 0;
+  line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888;
+  font-size: 0.8em;
+}
+
+#instructions {
+  text-transform: uppercase;
+  position: absolute;
+  top: 7px;
+  left: 9px;
+}
+
+.clicked #instructions {
+  position: inherit;
+  top: auto;
+  left: auto;
+}
+
+#konami {
+  // border: 1px solid #ccc;
+  // border-radius: 5px;
+  // color: #ccc;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-family: arial;
+  font-size: 10px;
+  // font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
+#arrows {
+  -webkit-transform: perspective(800px) rotateY(-90deg);
+  -moz-transform: perspective(800px) rotateY(-90deg);
+  transform: perspective(800px) rotateY(-90deg);
+}
+
+.clicked #arrows {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  -moz-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
+}
+
+#konami .arrow {
+  font-family: "ArrrowsRegular";
+  font-size: 12px;
+}
+
+#konami.key-1 span:nth-child(-n+1),
+#konami.key-2 span:nth-child(-n+2),
+#konami.key-3 span:nth-child(-n+3),
+#konami.key-4 span:nth-child(-n+4),
+#konami.key-5 span:nth-child(-n+5),
+#konami.key-6 span:nth-child(-n+6),
+#konami.key-7 span:nth-child(-n+7),
+#konami.key-8 span:nth-child(-n+8),
+#konami.key-9 span:nth-child(-n+9),
+#konami.key-10 span:nth-child(-n+10),
+#konami.key-11 span:nth-child(-n+11) {
+  color: #666;
+  transition: all 0.2s ease-out;
+}
+
+#konami.complete {
+  border-color: #f30;
+  color: #f30;
+  transition: border-color 0.3s ease-out, color 0.3s ease-out;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-name: flash;
+  animation-duration: 0.3s;
+  animation-name: flash;
+}
+
+#ghpong {
+  position: absolute;
+  color: #444;
+  text-align: center;
+  display: none;
+  width:223px;
+  background: #fff;
+  bottom: -78px;
+  padding:10px;
+  border-radius: 4px;
+  line-height: 19px;
+  font-size: 16px;
+  img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+@keyframes flash {
+  0% {
+    background: rgba(255, 51, 0, 0.0);
+  }
+
+  15% {
+    background: rgba(255, 51, 0, 0.3);
+  }
+
+  100% {
+    background: rgba(255, 51, 0, 0.0);
+  }
+
+}
+
+@media only screen and (max-width:600px) {
+  #react-pong
+ {
+    bottom: -26px;
+    right: -19px;
+  }
+
+}
